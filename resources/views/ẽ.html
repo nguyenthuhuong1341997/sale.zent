@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <style>
+  ul.nav li{
+    display: inline-block;
+  }
+#home.active,#about.active,#events.active, #contract.active{
+    background-color : blue
+}
+
+</style>
+</head>
+<body>
+  
+<!-- <div class="navbar navbar-inverse navbar-fixed-top"> -->
+<div class="navbar-inner">
+    <div class="container">
+            <ul class="nav">
+                <li class="active" id="home"><a href="#">Home</a></li>
+                <li id="about"><a href="#">About</a></li>
+                <li id="events"><a href="#">Events</a></li>
+                <li id="contract"><a href="#">Contact</a></li>
+            </ul>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+  $('ul.nav > li').click(function (e) {
+    e.preventDefault();
+    $('ul.nav > li').removeClass('active');
+    $(this).addClass('active');
+});
+</script>
+</html>
